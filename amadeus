@@ -4,7 +4,7 @@ path=$(dirname "$0")
 cd $path
 echo '' > input.txt
 wmctrl -r :ACTIVE: -e 0,10,500,890,100
-nohup conky --config=amadeus.conf > /dev/null &
+nohup conky --config=amadeus.conf > /dev/null 2>&1 &
 clear
 while true; do
 read -p"> " answer
