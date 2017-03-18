@@ -2,8 +2,9 @@
 # http://askubuntu.com/questions/94859/resizing-windows-to-a-particular-width-and-height-instantly
 path=$(dirname "$0")
 cd $path
-echo '' > input.txt
+echo 'hello' > input.txt
 wmctrl -r :ACTIVE: -e 0,10,500,890,100
+wmctrl -r :ACTIVE: -b toggle,above
 nohup conky --config=amadeus.conf > /dev/null 2>&1 &
 clear
 while true; do
